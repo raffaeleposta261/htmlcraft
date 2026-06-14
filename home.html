@@ -224,29 +224,28 @@
     
     
     /* DESKTOP: sostituisce le tre linee con la scritta Menu */
-@media (min-width: 769px) {
+
     .hamburger {
-        position: relative;
-        width: auto;
-        height: auto;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
 
-    .hamburger span {
-        display: none; /* nasconde le linee */
-    }
+.hamburger span {
+    display: none;
+}
 
-    .hamburger::after {
-        content: "Menu";
-        font-family: "Courier New", Courier, monospace;
-        font-style: italic;
-        font-weight: bold;
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-        color: var(--text-color);
-        display: block;
-        cursor: pointer;
-        user-select: none;
-    }
+.hamburger::after {
+    content: "Menu";
+    font-family: "Courier New", Courier, monospace;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    display: block;
 }
 
     
@@ -614,7 +613,7 @@ style="min-height:auto; padding:60px 20px;">
     <h2>Creative Digital Experiences</h2>
 <p>Modern interfaces enriched with subtle animations and carefully crafted components designed to engage users.</p>
 </div>
-            <
+            
 
         </section>
 
