@@ -9,6 +9,40 @@
     <title>HTMLcraft.uk</title>
 
     <style>
+/* DESKTOP: sostituisce le tre linee con la scritta Menu */
+@media (min-width: 769px) {
+    .hamburger {
+        position: relative;
+        width: auto;
+        height: auto;
+    }
+
+    .hamburger span {
+        display: none; /* nasconde le linee */
+    }
+
+    .hamburger::after {
+        content: "Menu";
+        font-family: "Courier New", Courier, monospace;
+        font-style: italic;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        color: var(--text-color);
+        display: block;
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+        
         :root {
             --top-bottom-bar-bg: #ffffff;
             --middle-bg: #E6E6E6;
