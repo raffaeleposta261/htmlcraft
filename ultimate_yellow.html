@@ -590,14 +590,16 @@ Explore My Projects
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
+// apri/chiudi menu
 menuBtn.addEventListener("click", () => {
-mobileMenu.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
 });
 
-document.addEventListener("click", (e) => {
-  if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+// chiudi sempre quando clicchi un link
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
     mobileMenu.classList.remove("active");
-  }
+  });
 });
  
 </script>
