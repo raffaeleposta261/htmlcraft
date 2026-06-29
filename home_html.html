@@ -108,6 +108,71 @@ transition:.3s;
 color:#D9A600;
 }
 
+/* HAMBURGER MENU */
+
+.hamburger{
+display:none;
+flex-direction:column;
+gap:6px;
+cursor:pointer;
+background:none;
+border:none;
+padding:0;
+}
+
+.hamburger span{
+width:24px;
+height:2.5px;
+background:#111;
+border-radius:3px;
+transition:.3s;
+}
+
+.hamburger.active span:nth-child(1){
+transform:rotate(45deg) translate(8px,8px);
+}
+
+.hamburger.active span:nth-child(2){
+opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+transform:rotate(-45deg) translate(8px,-8px);
+}
+
+.mobile-menu{
+display:none;
+position:absolute;
+top:70px;
+right:0;
+background:white;
+border-left:1px solid #ececec;
+border-bottom:1px solid #ececec;
+padding:20px;
+flex-direction:column;
+gap:15px;
+width:200px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.mobile-menu.active{
+display:flex;
+}
+
+.mobile-menu a{
+text-decoration:none;
+color:#111;
+font-weight:500;
+transition:.3s;
+padding:10px;
+border-radius:8px;
+}
+
+.mobile-menu a:hover{
+background:#f0f0f0;
+color:#D9A600;
+}
+
 /* HERO */
 
 .hero{
@@ -334,6 +399,10 @@ margin:auto;
 display:none;
 }
 
+.hamburger{
+display:flex;
+}
+
 .hero h1{
 font-size:2rem;
 }
@@ -362,6 +431,9 @@ img{max-width:100%;height:auto;}
 .card,.adv{padding:24px;}
 .project{height:180px;}
 .cta{padding:60px 20px;border-radius:24px;}
+.mobile-menu{
+width:180px;
+}
 }
 
 @media (max-width:480px){
@@ -381,6 +453,14 @@ text-align:center;
 .buttons{flex-direction:column;}
 #contact{padding:50px 0;}
 .cta{padding:40px 20px;}
+.mobile-menu{
+width:160px;
+padding:15px;
+}
+.mobile-menu a{
+padding:8px;
+font-size:0.95rem;
+}
 }
 
 </style>
@@ -396,6 +476,19 @@ Raffaeleposta261<span>.</span>
 </div>
 
 <nav class="menu">
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<button class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<nav class="mobile-menu" id="mobileMenu">
 <a href="#services">Services</a>
 <a href="#about">About</a>
 <a href="#portfolio">Portfolio</a>
@@ -597,6 +690,24 @@ Explore My Projects
 <footer>
 © 2026 Raffaeleposta261 · Personal Web Development Learning Journey
 </footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+});
+
+// Chiudi il menu quando clicchi su un link
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+  });
+});
+</script>
 
 </body>
 </html>
