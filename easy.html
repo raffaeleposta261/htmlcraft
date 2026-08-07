@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="robots" content="noindex, nofollow">
+
+ <title>Raffaeleposta261 | Ultra Light Version</title>
+
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+body{
+ font-family:Inter, Arial, sans-serif;
+ background:#fafafa;
+ color:#111;
+ line-height:1.6;
+}
+
+/* CONTAINER */
+.container{
+ max-width:1200px;
+ margin:0 auto;
+ padding:0 20px;
+}
+
+/* HEADER */
+header{
+ position:sticky;
+ top:0;
+ background:#ffffff;
+ border-bottom:1px solid #e5e5e5;
+ z-index:999;
+}
+
+.navbar{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:18px 24px;
+}
+
+.logo{
+ font-size:20px;
+ font-weight:800;
+}
+
+.logo span{
+ color:#FFD100;
+}
+
+/* MENU DESKTOP */
+.menu{
+ display:flex;
+ gap:30px;
+}
+
+.menu a{
+ text-decoration:none;
+ color:#111;
+ font-weight:500;
+}
+
+/* MOBILE MENU BUTTON */
+.menu-btn{
+ display:none;
+ background:none;
+ border:none;
+ font-size:16px;
+ font-weight:600;
+ color:#111;
+ cursor:pointer;
+}
+
+/* MOBILE DROPDOWN */
+.mobile-menu{
+ display:none;
+ position:absolute;
+ top:70px;
+ right:20px;
+ background:#fff;
+ border:1px solid #e5e5e5;
+ padding:15px;
+ width:180px;
+ box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.mobile-menu a{
+ display:block;
+ padding:8px;
+ text-decoration:none;
+ color:#111;
+}
+
+.mobile-menu a:hover{
+ background:#f0f0f0;
+}
+
+/* HERO */
+.hero{
+ padding:50px 0;
+}
+
+.hero-grid{
+ display:flex;
+ justify-content:space-between;
+ gap:60px;
+ align-items:center;
+}
+
+.badge{
+ display:inline-block;
+ padding:8px 14px;
+ background:#FFF7CC;
+ color:#D9A600;
+ border-radius:30px;
+ font-weight:600;
+ margin-bottom:20px;
+}
+
+.hero h1{
+ font-size:36px;
+ font-weight:800;
+ margin-bottom:20px;
+}
+
+.hero p{
+ font-size:16px;
+ color:#555;
+ margin-bottom:30px;
+}
+
+.buttons{
+ display:flex;
+ gap:15px;
+ flex-wrap:wrap;
+}
+
+.btn-primary{
+ background:#FFD100;
+ color:#fff;
+ padding:14px 22px;
+ border-radius:30px;
+ text-decoration:none;
+ font-weight:600;
+}
+
+.btn-secondary{
+ border:1px solid #ddd;
+ color:#111;
+ padding:14px 22px;
+ border-radius:30px;
+ text-decoration:none;
+}
+
+/* PROFILE CARD */
+.profile-card{
+ background:#fff;
+ padding:30px;
+ border-radius:20px;
+ box-shadow:0 4px 15px rgba(0,0,0,0.08);
+ text-align:center;
+ width:320px;
+}
+
+.avatar{
+ width:120px;
+ height:120px;
+ margin:0 auto 20px;
+ border-radius:50%;
+ background:#FFD100;
+}
+
+/* SECTIONS */
+section{
+ padding:70px 0;
+}
+
+.section-title{
+ font-size:30px;
+ font-weight:800;
+ text-align:center;
+ margin-bottom:15px;
+}
+
+.section-subtitle{
+ text-align:center;
+ color:#666;
+ margin-bottom:40px;
+ max-width:700px;
+ margin-left:auto;
+ margin-right:auto;
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:20px;
+}
+
+.card{
+ background:#fff;
+ padding:25px;
+ border-radius:20px;
+ box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* PROJECTS */
+.project{
+ height:180px;
+ border-radius:20px;
+ background:#FFD100;
+ display:flex;
+ align-items:flex-end;
+ padding:20px;
+ color:#fff;
+ font-weight:700;
+}
+
+/* ADVANTAGES */
+.advantages{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:15px;
+}
+
+.adv{
+ background:#fff;
+ padding:20px;
+ border-radius:15px;
+ box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* CTA */
+.cta{
+ background:#111;
+ color:#fff;
+ text-align:center;
+ padding:70px 20px;
+ border-radius:25px;
+}
+
+.cta h2{
+ font-size:32px;
+ margin-bottom:20px;
+}
+
+.cta p{
+ max-width:600px;
+ margin:0 auto 30px;
+ opacity:0.85;
+}
+
+/* FOOTER */
+footer{
+ text-align:center;
+ padding:40px 0;
+ color:#777;
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+ .hero-grid{
+  flex-direction:column;
+  text-align:center;
+ }
+ .profile-card{
+  margin:0 auto;
+ }
+ .grid{
+  grid-template-columns:repeat(2,1fr);
+ }
+ .advantages{
+  grid-template-columns:repeat(2,1fr);
+ }
+ .menu{
+  display:none;
+ }
+ .menu-btn{
+  display:block;
+ }
+}
+
+@media(max-width:600px){
+ .hero h1{
+  font-size:28px;
+ }
+ .grid{
+  grid-template-columns:1fr;
+ }
+ .advantages{
+  grid-template-columns:1fr;
+ }
+ .profile-card{
+  width:100%;
+ }
+}
+
+/* MOBILE MENU ACTIVE */
+.mobile-menu.active{
+ display:block;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="container navbar">
+
+  <div class="logo">Raffaeleposta261<span>.</span></div>
+
+  <nav class="menu">
+   <a href="#services">Services</a>
+   <a href="#about">About</a>
+   <a href="#portfolio">Portfolio</a>
+   <a href="#contact">Contact</a>
+  </nav>
+
+  <button class="menu-btn" id="menuBtn">Menu</button>
+
+  <div class="mobile-menu" id="mobileMenu">
+   <a href="#services">Services</a>
+   <a href="#about">About</a>
+   <a href="#portfolio">Portfolio</a>
+   <a href="#contact">Contact</a>
+  </div>
+
+ </div>
+</header>
+
+<section class="hero">
+ <div class="container">
+
+  <div class="hero-grid">
+
+   <div>
+    <div class="badge">Ultra‑Light HTML & CSS Version</div>
+
+    <h1>Modern Web Experiences<br>With Maximum Performance</h1>
+
+    <p>
+     This is the ultra‑light version of my learning project, optimized for Safari iOS,
+     Android and all modern browsers. No heavy filters, no blur, no rendering issues.
+    </p>
+
+    <div class="buttons">
+     <a href="#portfolio" class="btn-primary">View Portfolio</a>
+     <a href="#contact" class="btn-secondary">Contact Me</a>
+    </div>
+   </div>
+
+   <div class="profile-card">
+    <div class="avatar"></div>
+    <h3>Raffaeleposta261</h3>
+    <p>HTML & CSS Developer in Training</p>
+   </div>
+
+  </div>
+
+ </div>
+</section>
+
+<section id="services">
+ <div class="container">
+
+  <h2 class="section-title">Learning Areas</h2>
+  <p class="section-subtitle">Technologies and practices I'm exploring through hands‑on projects.</p>
+
+  <div class="grid">
+   <div class="card"><h3>HTML Development</h3><p>Semantic and accessible markup.</p></div>
+   <div class="card"><h3>Responsive Design</h3><p>Adaptive layouts for all devices.</p></div>
+   <div class="card"><h3>CSS Layout</h3><p>Flexbox, Grid and modern techniques.</p></div>
+   <div class="card"><h3>Personal Projects</h3><p>Experimentation and continuous learning.</p></div>
+  </div>
+
+ </div>
+</section>
+
+<section id="portfolio">
+ <div class="container">
+
+  <h2 class="section-title">Projects</h2>
+
+  <div class="grid">
+   <div class="project">Project 1</div>
+   <div class="project">Project 2</div>
+   <div class="project">Project 3</div>
+  </div>
+
+ </div>
+</section>
+
+<section id="about">
+ <div class="container">
+
+  <h2 class="section-title">About This Project</h2>
+  <p>
+   This GitHub page documents my learning journey in HTML and CSS.
+   Every project is built to improve my skills through real practice.
+  </p>
+
+ </div>
+</section>
+
+<section>
+ <div class="container">
+
+  <h2 class="section-title">Skills I'm Developing</h2>
+
+  <div class="advantages">
+   <div class="adv">✔ Semantic HTML</div>
+   <div class="adv">✔ Responsive Design</div>
+   <div class="adv">✔ CSS Grid & Flexbox</div>
+   <div class="adv">✔ UI Design</div>
+   <div class="adv">✔ Accessibility</div>
+   <div class="adv">✔ Continuous Learning</div>
+  </div>
+
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container">
+
+  <div class="cta">
+   <h2>Learning Through Real Projects</h2>
+   <p>Every project helps me grow as a developer through hands‑on experience.</p>
+   <a href="mailto:raffaeleposta261@gmail.com" class="btn-primary">Explore My Projects</a>
+  </div>
+
+ </div>
+</section>
+
+<footer>
+ © 2026 Giovanni Raffaele Siciliano, Torre del Lago
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+ mobileMenu.classList.toggle("active");
+});
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+ link.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+ });
+});
+</script>
+
+</body>
+</html>
